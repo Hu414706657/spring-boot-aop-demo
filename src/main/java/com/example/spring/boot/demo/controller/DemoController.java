@@ -7,13 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.jar.JarEntry;
 
 /**
  * @author: 胡文良
@@ -35,13 +30,4 @@ public class DemoController {
         return data;
     }
 
-    @RequestMapping("/failed")
-    @ResponseBody
-    public JSONObject requestFailed() {
-
-        JSONObject map = new JSONObject();
-        map.put("code", "-1");
-        map.put("msg", "请求错误");
-        return map;
-    }
 }
